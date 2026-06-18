@@ -90,16 +90,15 @@
 
 스프링에서 빈은 싱글톤  객체임으로 **메모리상에 존재하는 단 하나의 ReservationService 인스턴스**를 공유해서 사용할 수 없었습니다.
 
-따라서 val로 직접 선언해서 테스트를해봄
+따라서 val로 직접 선언해서 테스트를해봤습니다.
 
 동일한 DB 레포지토리를 공유하되 메모리만 격리된 두 개의 서버를 시뮬레이션하기 위해, 통합 테스트 코드 내부에서 서비스 인스턴스를 직접 생성하여 테스트코드를 작성했습니다.
 
 
 
 
-// 동일한 DB를 공유하지만 메모리는 분리된 두 개의 서버 시뮬레이션 시도
-val serverA = ReservationServiceImpl(reservationRepository, roomRepository)
-val serverB = ReservationServiceImpl(reservationRepository, roomRepository)
+<img width="528" height="92" alt="image" src="https://github.com/user-attachments/assets/0688c823-0beb-4798-9c5f-8d9230442100" />
+
 
 
 의도대로 잘 작동했으나 실제 db에는  20개로의도와 다르게 모든 경합 시도가 저장됩니다 .
