@@ -1,5 +1,6 @@
 회의실 좌석 예약 서비스에서는 동시성 처리를 고려해야 합니다. 
-좌석 예매 오픈 시 여러 사용자가 동시에 예약을 시도하면, 자원이 안전하게 관리되지 않을 경우 예약이 초과되거나 데이터 일관성이 깨질 위험이 있습니다. 
+좌석 예매 오픈 시 여러 사용자가 동시에 예약을 시도하면, 
+자원이 안전하게 관리되지 않을 경우 예약이 초과되거나 데이터 일관성이 깨질 위험이 있습니다. 
 코드 적용 및 테스트를 통해 각 동시성 처리 방식의 장단점을 검토하고, 최종적으로 처리 방식을 선정해보겠습니다.
 
 
@@ -47,9 +48,11 @@
 3 curcurrentmap
 
 스레드 100개 일경우 
+
 <img width="189" height="89" alt="image" src="https://github.com/user-attachments/assets/ec23ae6d-21ac-43e7-b777-e2819da19cc3" />
 
 방이 2개 이상일 경우
+
 <img width="204" height="90" alt="image" src="https://github.com/user-attachments/assets/3f11ad60-1348-429e-a88e-3f7816ac4256" />
 
 
