@@ -52,13 +52,9 @@
 ---
 4 낙관락
 
-낙관락은 db 수준에서 lock 을 걸어서 ~ 처리하는 방법으로 
+낙관적 락은 데이터 원자성을 보장하는 데이터베이스의 버전 관리 메커니즘에 의존하므로, 
 
-앞서 사용한  synchronized 적용이랑 ,curcurrentmap 도입 
-
-과  달리 다중 인스턴스 환경에서도  동시성 제어가 가능하다고 들음
-
-실제로 판단할려고합니다
+물리적으로 분리된 여러 대의 서버 세팅에서도 동시성 제어가 가능할 것이라 판단하여 아키텍처적 검증을 시작했습니다.
 
 <img width="187" height="90" alt="image" src="https://github.com/user-attachments/assets/6ba39c9a-1960-485e-b32d-cfcee3988a9b" />
 
